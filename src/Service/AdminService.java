@@ -83,7 +83,7 @@ public class AdminService {
             System.out.println("\nPress 3 to go back\n");
             System.out.print("Username:- ");
             name = sc.nextLine();
-            if(name.equals("2")) {return;}
+            if(name.equals("3")) {return;}
             if (!ValidationClass.isValidUserName(name)) {
                 System.out.println("\nInvalid User Name, First Letter Should be Capital, Name Should Not Start With Numbers or Special Characters");
                 System.out.println("Name should contain atleast 1 special character or a digit.\n");
@@ -98,7 +98,7 @@ public class AdminService {
             System.out.println("\nPress 3 to go back\n");
             System.out.print("Email:- ");
             email = sc.nextLine();
-            if(email.equals("2")) {return;}
+            if(email.equals("3")) {return;}
             validEmail = ValidationClass.isValidEmail(email);
             if (!validEmail) {
                 System.out.println("\n| Only 1 Special Character is Allowed | Include atleast 1 special character\n");
@@ -112,7 +112,7 @@ public class AdminService {
             String input = "";
             System.out.print("Enter your mobile no:- ('type exit to stop'):- ");
             input = sc.nextLine();
-            if(input.equals("2")) {return;}
+            if(input.equals("3")) {return;}
 
             if (input.equalsIgnoreCase("exit")) {
                 break;
@@ -149,7 +149,7 @@ public class AdminService {
         System.out.println("\nPress 3 to go back");
         System.out.print("\nEnter user email to fetch:- ");
         String email = sc.nextLine();
-        if(email.equals("2")) {return Optional.empty();}
+        if(email.equals("3")) {return Optional.empty();}
         Optional<User> user = fetchSingleUser(email);
 
         try {
@@ -258,7 +258,7 @@ public class AdminService {
         System.out.println("\nPress 3 to go back");
         System.out.print("\nEnter user email to delete:- ");
         String email = sc.nextLine();
-        if(email.equals("2")) {return;}
+        if(email.equals("3")) {return;}
         Optional<User> user = fetchSingleUser(email);
 
         try {
