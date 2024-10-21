@@ -1,6 +1,5 @@
 package Entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -20,17 +19,27 @@ public class User {
     public long getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
-
     public String getEmail() {
         return email;
     }
-
     public List<String> getMobileList() {
         return mobileList;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setMobileList(List<String> mobileList) {
+        this.mobileList = mobileList;
     }
 
     @Override
@@ -41,21 +50,5 @@ public class User {
                 ", email='" + email + '\'' +
                 ", mobileList=" + mobileList +
                 '}';
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setMobileList(List<String> mobileList) {
-        this.mobileList = mobileList;
     }
 }
